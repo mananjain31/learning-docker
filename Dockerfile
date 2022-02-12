@@ -1,5 +1,6 @@
 FROM node:latest
 WORKDIR /app
+ADD package*.json .
+RUN yarn
 ADD . .
-RUN npm install yarn 
-CMD yarn && node index.js 
+CMD node index.js 
